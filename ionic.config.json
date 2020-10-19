@@ -1,0 +1,7 @@
+{
+  "name": "basketBallGlobalLeague",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
