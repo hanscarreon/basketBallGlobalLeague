@@ -1,0 +1,23 @@
+ion-content{
+    --background: linear-gradient(90deg, rgba(0,101,179,1) 12%, rgba(237,23,75,1) 74%);
+
+    .nba-title{
+        font-family: 'nba';
+        font-size: 3em;
+        color:white
+    }
+    .allstar{
+    --background: linear-gradient(90deg,   rgba(237,23,75,1) 12%, rgba(0,101,179,1) 74%);
+    }
+    .content-news{
+        color: white;
+    }
+    .btn-read{
+        background: black;
+        color: white;
+        padding: 5px;
+        width: 30%;
+        text-align: center;
+        border-radius: 5%;
+    }
+}

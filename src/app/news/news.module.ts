@@ -1,3 +1,6 @@
+import { NewsViewComponent } from './news-view/news-view.component';
+import { NewsListComponent } from './news-list/news-list.component';
+import { ViewListComponent } from './view-list/view-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +18,10 @@ import { NewsPage } from './news.page';
     IonicModule,
     NewsPageRoutingModule
   ],
-  declarations: [NewsPage]
+  declarations: [
+    NewsPage,
+    NewsViewComponent,
+    NewsListComponent
+  ]
 })
 export class NewsPageModule {}

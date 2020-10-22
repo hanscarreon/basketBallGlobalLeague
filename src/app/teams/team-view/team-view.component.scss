@@ -1,0 +1,26 @@
+.east-bg{
+    --background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,101,179,1) 100%);
+    color: white;
+}
+.west-bg{
+    --background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(237,23,75,1) 100%);
+    color: white;
+}
+.bd-rad-10{
+    border-radius: 10%;
+}
+.team-name{
+    font-family: 'nba';
+    color:black;
+    font-size: 2.4em;
+}
+.west-btn{
+    --background: linear-gradient(0deg, rgba(237,23,75,1)0%, rgba(0,0,0,1) 100%);
+    border: solid 2px white;
+
+}
+.east-btn{
+    --background: linear-gradient(0deg, rgba(0,101,179,1)0%,  rgba(0,0,0,1) 100%);
+    border: solid 2px white;
+
+}

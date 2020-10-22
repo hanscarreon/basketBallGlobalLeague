@@ -1,3 +1,5 @@
+import { TeamViewComponent } from './team-view/team-view.component';
+import { TeamListComponent } from './team-list/team-list.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +17,10 @@ import { TeamsPage } from './teams.page';
     IonicModule,
     TeamsPageRoutingModule
   ],
-  declarations: [TeamsPage]
+  declarations: [
+    TeamsPage,
+    TeamListComponent,
+    TeamViewComponent
+  ]
 })
 export class TeamsPageModule {}

@@ -1,0 +1,12 @@
+<div class="ion-page" id="main-content" *ngIf=" stadiumData && isLoading">
+  <ion-content class="ion-padding" >
+    <ion-button  (click)="getMenu()" color="dark" > <ion-icon name="menu-outline"></ion-icon></ion-button>
+      <ion-list class="ion-padding ion-margin-top ion-text-center">
+            <h2 class="nba-title ion-text-center">Stadium List</h2>
+        <ion-searchbar (ionChange)="onSearchTerm($event)" placeholder="Search Player"></ion-searchbar>
+        <ion-item *ngFor="let data of stadiumData " [routerLink]="['/stadium/view/'+ data.StadiumID]" >
+          {{ data.Name }}
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</div>

@@ -1,0 +1,26 @@
+<div class="ion-page" id="main-content" *ngIf=" stadiumData && isLoading">
+  <ion-content class="ion-padding" >
+    <ion-button  (click)="getMenu()" color="dark" > <ion-icon name="menu-outline"></ion-icon></ion-button>
+            <ion-card>
+             <h1 class="ion-text-start" (click)="goBack()" ><ion-icon name="arrow-back-outline"></ion-icon></h1>
+              <h2 class="nba-title ion-text-center">Stadium Info</h2>
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>
+                  {{ stadiumData[stadID].Name }}
+                </ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                  <h3>Address: {{ stadiumData[stadID].Address }}</h3>
+                  <h3>Capacity: {{ stadiumData[stadID].Capacity }}</h3>
+                  <h3>City: {{ stadiumData[stadID].City }}</h3>
+                  <h3>Country: {{ stadiumData[stadID].Country }}</h3>
+                  <h3>GeoLat: {{ stadiumData[stadID].GeoLat }}</h3>
+                  <h3>GeoLong: {{ stadiumData[stadID].GeoLong }}</h3>
+                  <h3>Zip: {{ stadiumData[stadID].Zip }}</h3>
+                  <br>
+              </ion-card-content>
+            </ion-card>
+  </ion-content>
+</div>

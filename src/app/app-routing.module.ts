@@ -23,6 +23,18 @@ const routes: Routes = [
     path: 'news',
     loadChildren: () => import('./news/news.module').then( m => m.NewsPageModule)
   },
+  {
+    path: 'play',
+    loadChildren: () => import('./play/play.module').then( m => m.PlayPageModule)
+  },
+  {
+    path: 'players',
+    loadChildren: () => import('./players/players.module').then( m => m.PlayersPageModule)
+  },
+  {
+    path: 'stadium',
+    loadChildren: () => import('./stadium/stadium.module').then( m => m.StadiumPageModule)
+  },
 ];
 
 @NgModule({

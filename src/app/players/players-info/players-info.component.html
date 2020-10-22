@@ -1,0 +1,95 @@
+<div class="ion-page" id="main-content">
+  <ion-content class="ion-padding"  *ngIf="playerData && isLoading" style="--background:#{{teamData[0].PrimaryColor}}">
+  <ion-button  (click)="getMenu()" color="dark" > <ion-icon name="menu-outline"></ion-icon></ion-button>
+    <div class="ion-margin-top">
+      <ion-card >
+        <ion-card-header class="ion-text-center">
+          <h1 class="ion-text-start" (click)="goBack()" ><ion-icon name="arrow-back-outline"></ion-icon></h1>
+          <img class="" src="{{ playerData[0].PhotoUrl}}" > 
+          <ion-card-title>  {{ playerData[0].FirstName}}  {{ playerData[0].LastName}} </ion-card-title>
+          <ion-card-subtitle> Jersey: #{{ playerData[0].Jersey}}  </ion-card-subtitle>
+          <ion-button [routerLink]="['/teams/view/'+teamData[0].TeamID]" style="--background: #{{teamData[0].SecondaryColor}}; color:#{{teamData[0].QuaternaryColor}}"> View Team Stats </ion-button>
+        </ion-card-header>
+        <ion-card-content>
+          <table class="table table-striped ">
+            <tbody>
+              <tr>
+                <th scope="row">Birth City</th>
+                <td> {{  playerData[0].BirthCity }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Birth Country</th>
+                <td> {{  playerData[0].BirthCountry }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Birth Date</th>
+                <td> {{  playerData[0].BirthDate | date:'medium' }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Birth State</th>
+                <td> {{  playerData[0].BirthState }} </td>
+              </tr>
+              <tr>
+                <th scope="row">College</th>
+                <td> {{  playerData[0].College }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Depth Chart Order</th>
+                <td> {{  playerData[0].DepthChartOrder }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Depth Chart Position</th>
+                <td> {{  playerData[0].DepthChartPosition }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Experience</th>
+                <td> {{  playerData[0].Experience }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Fan Duel Name</th>
+                <td> {{  playerData[0].FanDuelName }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Fantasy Draft Name</th>
+                <td> {{  playerData[0].FantasyDraftName }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Injury Body Part</th>
+                <td> {{  playerData[0].InjuryBodyPart }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Injury Notes</th>
+                <td> {{  playerData[0].InjuryNotes }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Injury Start Date</th>
+                <td> {{  playerData[0].InjuryStartDate }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Injury Status</th>
+                <td> {{  playerData[0].InjuryStatus }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Position</th>
+                <td> {{  playerData[0].Position }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Position Category</th>
+                <td> {{  playerData[0].PositionCategory }} </td>
+              </tr>
+              <tr>
+                <th scope="row">Salary</th>
+                <td> {{  playerData[0].Salary | number:'':'en'}} </td>
+              </tr>
+              <tr>
+                <th scope="row">Weight</th>
+                <td> {{  playerData[0].Weight }} </td>
+              </tr>
+            </tbody>
+          </table>
+        </ion-card-content>
+
+      </ion-card>
+    </div>
+  </ion-content>
+</div>

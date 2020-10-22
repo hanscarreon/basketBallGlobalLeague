@@ -1,13 +1,30 @@
 <div class="ion-page" id="main-content">
-  <ion-header class="ion-no-border">
-    <ion-toolbar>
-      <ion-buttons slot="primary">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title class="header-title">Speedy Motor</ion-title>
-    </ion-toolbar>
-  </ion-header>
-    <ion-content class="ion-padding">
+  <ion-content class="ion-padding">
+  <ion-button  (click)="getMenu()" color="dark" > <ion-icon name="menu-outline"></ion-icon></ion-button>
+    <div class=" ion-margin-top" >
+     <ion-card class="allstar">
+        <h2 class="nba-title ion-text-center">News Update</h2>
+     </ion-card>
+
+     <ion-list>
+      <ion-item *ngFor="let data of newsData; index as i">
+        <ion-label>
+          <h1> {{ data.Title }}</h1>
+          <small>Source : {{ data.OriginalSource }}</small>
+          <h5 class="" [routerLink]="['view/'+ i]"><div class="btn-read">Read More</div></h5>
+      </ion-label>
+      </ion-item>
+    </ion-list>
+ 
      
-    </ion-content>
-  </div>
+     <!-- <ion-card *ngFor="let data of newsData">
+       <ion-card-header>
+         <ion-card-title>{{ data.Title }}</ion-card-title>
+         <small>Source : {{ data.OriginalSource }}</small>
+       </ion-card-header>
+    </ion-card> -->
+     
+    </div>
+  
+  </ion-content>
+</div>

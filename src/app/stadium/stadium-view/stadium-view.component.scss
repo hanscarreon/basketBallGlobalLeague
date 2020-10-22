@@ -1,0 +1,13 @@
+ion-content{
+    --background: linear-gradient(90deg, rgba(0,101,179,1) 12%, rgba(237,23,75,1) 74%);
+
+    .nba-title{
+        font-family: 'nba';
+        font-size: 3em;
+        color:black;
+    }
+    .allstar{
+    --background: linear-gradient(90deg,   rgba(237,23,75,1) 12%, rgba(0,101,179,1) 74%);
+    }
+   
+}

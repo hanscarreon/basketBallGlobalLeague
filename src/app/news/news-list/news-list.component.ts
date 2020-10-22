@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-list.component.scss'],
 })
 export class NewsListComponent implements OnInit {
-
+  newsData : any[]
+  optOne={
+    loop:true,
+    autoplay:true
+  }
   constructor(
     private dataApi:DataApiService
 
@@ -19,9 +23,14 @@ export class NewsListComponent implements OnInit {
     this.readNews();
   }
 
+  getMenu(){
+    this.dataApi.presentActionSheet();
+  }
+
   readNews(){
     this.dataApi.getNews().subscribe((data)=>{
-      console.log(data);
+      this.newsData = data.news
+      console.log(data.news);
     })
   }
 

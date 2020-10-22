@@ -25,3 +25,13 @@
 #container a {
   text-decoration: none;
 }
+
+.nba-title{
+  font-family: 'nba';
+  font-size: 2em;
+  color:white;
+  text-align: center;
+}
+ion-content{
+  --background: linear-gradient(0deg, rgba(237,23,75,1) 0%, rgba(0,101,179,1) 100%);
+}

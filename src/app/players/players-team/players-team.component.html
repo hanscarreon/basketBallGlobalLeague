@@ -1,0 +1,15 @@
+<div class="ion-page" id="main-content" *ngIf="teamData">
+  <ion-content class="ion-padding" style="--background:#{{ teamData[0].PrimaryColor }};">
+    <!-- <ion-content class="ion-padding" > -->
+    <ion-button  (click)="getMenu()" color="dark" > <ion-icon name="menu-outline"></ion-icon></ion-button>
+      <ion-list class="ion-padding ion-margin-top ion-text-center">
+            <h1 class="ion-text-start" (click)="goBack()" ><ion-icon name="arrow-back-outline"></ion-icon></h1>
+            <h2 class="team-name ion-text-center" style="color: #{{teamData[0].SecondaryColor}}">{{ teamData[0].City }} {{ teamData[0].Name }}</h2>
+            <img class="" src="{{ teamData[0].WikipediaLogoUrl }}" >
+        <ion-searchbar (ionChange)="onSearchTerm($event)" placeholder="Search Player"></ion-searchbar>
+        <ion-item *ngFor="let data of playersTeam " [routerLink]="['/players/info/'+ teamData[0].TeamID+'/'+data.PlayerID ]" >
+          {{ data.FantasyDraftName }}
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</div>
